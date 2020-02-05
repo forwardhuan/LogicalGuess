@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">逻辑猜数</string>
+    <string name="instructs">这是一款益智小游戏，游戏规则:系统会随机产生各个数位不同的四位数，
+        A代表数对位置对，B代表数对位置不对，A+B得到的是猜对的总个数，直到4A0B游戏结束。</string>
+    <string name="not_support">暂不支持</string>
+    <string name="peek_the_answer">又偷看答案 %s</string>
+    <string name="cancel">取消</string>
+    <string name="restart">再玩一次</string>
+    <string name="guess_success_restart">您已经猜对了，是否再玩一次</string>
+    <string name="please_input_four_num">请输入各个数位不同的四位数</string>
+    <string name="congratulations_you_success">恭喜您，猜对啦</string>
+</resources>

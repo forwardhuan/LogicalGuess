@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/logical_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/padding_ten"
+            android:onClick="onClick"
+            android:padding="@dimen/padding_three"
+            android:src="@mipmap/back"/>
+
+        <TextView
+            android:id="@+id/menu_name"
+            style="@style/TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/padding_ten"
+            android:onClick="onClick"
+            android:src="@mipmap/help"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_ten"
+                android:text="@string/instructs"
+                android:textColor="@color/white"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginTop="@dimen/padding_ten"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/step"
+                    android:layout_width="@dimen/item_height"
+                    android:layout_height="@dimen/item_height"
+                    android:background="@color/darkorange"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_five"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"/>
+
+                <ImageView
+                    android:id="@+id/history"
+                    android:layout_width="@dimen/item_height"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="@dimen/padding_ten"
+                    android:layout_marginRight="@dimen/padding_ten"
+                    android:background="@color/darkorange"
+                    android:onClick="onClick"
+                    android:padding="@dimen/padding_five"
+                    android:src="@mipmap/history"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginTop="@dimen/padding_ten"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/restart"
+                    android:layout_width="@dimen/item_height"
+                    android:layout_height="@dimen/item_height"
+                    android:background="@color/darkorange"
+                    android:onClick="onClick"
+                    android:padding="@dimen/padding_ten"
+                    android:src="@mipmap/restart"/>
+
+                <ImageView
+                    android:id="@+id/display"
+                    android:layout_width="@dimen/item_height"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginLeft="@dimen/padding_ten"
+                    android:layout_marginRight="@dimen/padding_ten"
+                    android:background="@color/darkorange"
+                    android:onClick="onClick"
+                    android:padding="@dimen/padding_five"
+                    android:src="@mipmap/display"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/input"
+            style="@style/ItemEdiTextStyle"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/padding_five"
+            android:background="@drawable/input_background_shape"
+            android:inputType="number"
+            android:maxLength="4"/>
+
+        <ImageView
+            android:id="@+id/confirm"
+            android:layout_width="@dimen/item_height"
+            android:layout_height="@dimen/item_height"
+            android:onClick="onClick"
+            android:padding="@dimen/padding_ten"
+            android:src="@mipmap/confim"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/padding_five"
+        android:divider="@null"
+        android:dividerHeight="@dimen/padding_five"
+        android:scrollbars="none">
+    </ListView>
+</LinearLayout>
